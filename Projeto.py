@@ -70,7 +70,7 @@ label.grid(column=0, row=0, sticky=W, **paddings)
 # option menu
 tipo_figura_var = StringVar(root) # Guarda o tipo de figura selecionado no option menu (linha ou rabisco)
 option_menu = ttk.OptionMenu(frame, tipo_figura_var,
-                             'Linha', 'Linha', 'Rabisco', 'Retangulos', 'Ovais', ' Circulos')
+                             'Linha', 'Linha', 'Rabisco')
 option_menu.grid(column=1, row=0, sticky=W, **paddings)
 
 # Área de desenho
@@ -85,3 +85,4 @@ canvas.bind('<B1-Motion>', atualizar_figura_nova)
 canvas.bind('<ButtonRelease-1>', incluir_figura_nova)
 
 root.mainloop()
+

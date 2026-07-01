@@ -80,3 +80,31 @@ class Circulos(Ovais):
             self.y2 = self.y1 + lado
         else:
             self.y2 = self.y1 - lado
+
+class Triangulo(Linha):
+    def __init__(self, x1, y1, cor, cor_preench):
+        super().__init__(x1, y1, cor, cor_preench)
+    def desenhar(self, canvas):
+        x3 = self.x1
+        y3 = self.y2
+        canvas.create_polygon(self.x1, self.y1, self.x2, self.y2, x3, y3, outline=self.cor, fill=self.cor_preench);
+    def desenhar_nova(self, canvas):
+        x3 = self.x1
+        y3 = self.y2
+        canvas.create_polygon(self.x1, self.y1, self.x2, self.y2, x3, y3, outline=self.cor, fill=self.cor_preench, dash=(4, 2))
+
+class Pentagono(Linha):
+    def __init__(self, x1, y1, cor, cor_preench):
+        super().__init__(x1, y1, cor, cor_preench)
+
+    def desenhar(self, canvas):
+        largura = self.x2 - self.x1
+        altura = self.y2 - self.y1
+        xm = (self.x1 + self.x2) / 2
+        canvas.create_polygon( xm, self.y1, self.x2, self.y1 + altura*0.35,self.x2 - largura*0.2, self.y2, self.x1 + largura*0.2, self.y2, self.x1, self.y1 + altura*0.35, outline=self.cor,fill=self.cor_preench0)
+
+    def desenhar_nova(self, canvas):
+        largura = self.x2 - self.x1
+        altura = self.y2 - self.y1
+        xm = (self.x1 + self.x2) / 2
+        canvas.create_polygon(xm, self.y1, self.x2, self.y1 + altura*0.35,self.x2 - largura*0.2, self.y2, self.x1 + largura*0.2, self.y2, self.x1, self.y1 + altura*0.35, outline=self.cor,fill=self.cor_preench)

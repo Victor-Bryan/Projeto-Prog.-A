@@ -2,6 +2,7 @@ from Figura import (Linha, Rabisco, Retangulos, Triangulo, Ovais, Circulos, Pent
 from tkinter import *
 from tkinter import ttk
 
+
 def iniciar_figura_nova(event):
     global figura_nova
     cor = cor_borda_var.get()
@@ -41,9 +42,9 @@ def desenhar_figuras():
         figura.desenhar(canvas)
     if figura_nova is not None:
         figura_nova.desenhar_nova(canvas)
-
-figuras = [] 
-figura_nova = None
+    
+figuras = []      
+figura_nova = None 
 
 root = Tk()
 root.title('Exemplo de aplicação')
@@ -51,6 +52,7 @@ frame = Frame(root)
 
 paddings = {'padx': 5, 'pady': 5} 
 
+# label
 label = ttk.Label(frame,  text='Escolha a forma do desenho:')
 label.grid(column=0, row=0, sticky=W, **paddings)
 label_cor = ttk.Label(frame, text='Cor da borda:')
@@ -99,6 +101,7 @@ option_corP = ttk.OptionMenu(
 )
 option_corP.grid(column=1, row=2, sticky=W, **paddings)
 
+# Área de desenho
 canvas = Canvas(frame, bg='white', width=600, height=600)
 canvas.grid(column=0, row=3, columnspan=2, sticky=W, **paddings)
 

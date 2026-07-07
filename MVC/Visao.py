@@ -30,3 +30,16 @@ class View:
         self.canvas = Canvas( self.frame, width=600, height=600, bg="white")
 
         self.canvas.grid(row=3, column=0, columnspan=2, **paddings)
+    
+    def redesenhar(self, model, figura_nova=None):
+
+        self.canvas.delete("all")
+
+        for figura in model.listar():
+            figura.desenhar(self.canvas)
+
+        if figura_nova is not None:
+            figura_nova.desenhar_nova(self.canvas)
+
+    def iniciar(self):
+        self.root.mainloop()        

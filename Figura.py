@@ -101,7 +101,7 @@ class Pentagono(Linha):
         largura = self.x2 - self.x1
         altura = self.y2 - self.y1
         xm = (self.x1 + self.x2) / 2
-        canvas.create_polygon( xm, self.y1, self.x2, self.y1 + altura*0.35,self.x2 - largura*0.2, self.y2, self.x1 + largura*0.2, self.y2, self.x1, self.y1 + altura*0.35, outline=self.cor,fill=self.cor_preench0)
+        canvas.create_polygon( xm, self.y1, self.x2, self.y1 + altura*0.35,self.x2 - largura*0.2, self.y2, self.x1 + largura*0.2, self.y2, self.x1, self.y1 + altura*0.35, outline=self.cor,fill=self.cor_preench)
 
     def desenhar_nova(self, canvas):
         largura = self.x2 - self.x1

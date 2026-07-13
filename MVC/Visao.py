@@ -20,6 +20,10 @@ class View:
         self.tipo_figura_var = StringVar(value="Linha")
         self.cor_borda_var = StringVar(value="black")
         self.cor_preench_var = StringVar(value="")
+        self.bt_salvar = ttk.Button(self.frame, text="Salvar")
+        self.bt_salvar.grid(row=0, column=2)
+        self.bt_abrir = ttk.Button(self.frame, text="Abrir")
+        self.bt_abrir.grid(row=1, column=2)
 
         ttk.OptionMenu(self.frame, self.tipo_figura_var, "Linha", "Linha", "Rabisco", "Retangulos","Ovais", "Circulos", "Triangulo", "Pentagono" ).grid(row=0, column=1, sticky=W, **paddings)
 

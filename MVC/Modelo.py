@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import pickle
 
 class Model:
 
@@ -10,6 +11,13 @@ class Model:
 
     def listar(self):
         return self.figuras
+    def salvar(self, nome_arquivo):
+        with open(nome_arquivo, "wb") as arquivo:
+            pickle.dump(self.figuras, arquivo)
+
+    def abrir(self, nome_arquivo):
+        with open(nome_arquivo, "rb") as arquivo:
+            self.figuras = pickle.load(arquivo)
 
 class Figura(ABC):
     def __init__(self, cor, cor_preench = ''):

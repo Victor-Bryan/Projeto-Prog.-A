@@ -1,4 +1,6 @@
 from Modelo import *
+from tkinter import filedialog
+
 
 class Controlador:
 
@@ -11,6 +13,9 @@ class Controlador:
         self.view.canvas.bind("<ButtonPress-1>", self.iniciar_figura_nova)
         self.view.canvas.bind("<B1-Motion>", self.atualizar_figura_nova)
         self.view.canvas.bind("<ButtonRelease-1>", self.incluir_figura_nova)
+        self.view.bt_salvar.config(command=self.salvar)
+        self.view.bt_abrir.config(command=self.abrir)
+
 
     def iniciar_figura_nova(self, event):
 
@@ -59,3 +64,21 @@ class Controlador:
         self.figura_nova = None
 
         self.view.redesenhar(self.model)
+    
+    def salvar(self):
+        arquivo = filedialog.asksaveasfilename(
+                  defaultextension=".des",
+                  filetypes=[("Arquivos de desenho", "*.des")]
+                  )
+
+        if arquivo:
+             self.model.salvar(arquivo)
+    
+    def abrir(self):
+        arquivo = filedialog.askopenfilename(
+             filetypes=[("Arquivos de desenho", "*.des")]
+            )
+
+        if arquivo:
+            self.model.abrir(arquivo)
+            self.view.redesenhar(self.model)

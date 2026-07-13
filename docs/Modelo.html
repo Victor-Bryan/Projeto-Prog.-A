@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Modelo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Modelo</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cvicto%5Conedrive%5C%C3%A1rea%20de%20trabalho%5Cprojeto%5Cmodelo.py">c:\users\victo\onedrive\área de trabalho\projeto\modelo.py</a></font></td></tr></table>
+    <p><tt>Módulo&nbsp;Modelo.<br>
+&nbsp;<br>
+Este&nbsp;módulo&nbsp;contém&nbsp;a&nbsp;implementação&nbsp;do&nbsp;modelo&nbsp;da&nbsp;aplicação,<br>
+incluindo&nbsp;as&nbsp;classes&nbsp;que&nbsp;representam&nbsp;as&nbsp;figuras&nbsp;geométricas<br>
+e&nbsp;a&nbsp;classe&nbsp;responsável&nbsp;por&nbsp;armazená-las&nbsp;e&nbsp;realizar&nbsp;a&nbsp;persistência.<br>
+&nbsp;<br>
+@author:&nbsp;Victor&nbsp;Bryan<br>
+@author:&nbsp;José&nbsp;Alberto<br>
+@version:&nbsp;1.0</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pickle.html">pickle</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="abc.html#ABC">abc.ABC</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Figura">Figura</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Linha">Linha</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Ovais">Ovais</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Circulos">Circulos</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Pentagono">Pentagono</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Modelo.html#Retangulos">Retangulos</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Modelo.html#Triangulo">Triangulo</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Rabisco">Rabisco</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Modelo.html#Model">Model</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Circulos">class <strong>Circulos</strong></a>(<a href="Modelo.html#Ovais">Ovais</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Circulos">Circulos</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench)<br>
+&nbsp;<br>
+Representa&nbsp;um&nbsp;círculo.<br>
+&nbsp;<br>
+Herda&nbsp;da&nbsp;classe&nbsp;<a href="#Ovais">Ovais</a>&nbsp;e&nbsp;garante&nbsp;que&nbsp;a&nbsp;largura&nbsp;e&nbsp;a&nbsp;altura<br>
+sejam&nbsp;iguais,&nbsp;mantendo&nbsp;a&nbsp;forma&nbsp;circular&nbsp;independentemente<br>
+do&nbsp;movimento&nbsp;do&nbsp;mouse.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Circulos">Circulos</a></dd>
+<dd><a href="Modelo.html#Ovais">Ovais</a></dd>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Circulos-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench)</dt><dd><tt>Inicializa&nbsp;o&nbsp;__init__&nbsp;de&nbsp;<a href="#Linha">Linha</a>&nbsp;<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Circulos-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;as&nbsp;dimensões&nbsp;do&nbsp;círculo.<br>
+&nbsp;<br>
+Calcula&nbsp;um&nbsp;único&nbsp;valor&nbsp;para&nbsp;largura&nbsp;e&nbsp;altura,&nbsp;garantindo<br>
+que&nbsp;o&nbsp;desenho&nbsp;mantenha&nbsp;o&nbsp;formato&nbsp;circular.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X&nbsp;do&nbsp;cursor.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y&nbsp;do&nbsp;cursor.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Ovais">Ovais</a>:<br>
+<dl><dt><a name="Circulos-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;a&nbsp;figura&nbsp;oval&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+Utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final&nbsp;para&nbsp;definir&nbsp;o<br>
+retângulo&nbsp;delimitador&nbsp;da&nbsp;oval.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;a&nbsp;oval&nbsp;será&nbsp;exibida.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Circulos-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;pré-visualização&nbsp;da&nbsp;figura&nbsp;oval.<br>
+&nbsp;<br>
+Exibe&nbsp;a&nbsp;oval&nbsp;enquanto&nbsp;o&nbsp;usuário&nbsp;ainda&nbsp;está&nbsp;definindo<br>
+suas&nbsp;dimensões.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;a&nbsp;pré-visualização&nbsp;será&nbsp;exibida.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Linha">Linha</a>:<br>
+<dl><dt><a name="Circulos-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Figura">class <strong>Figura</strong></a>(<a href="abc.html#ABC">abc.ABC</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Figura">Figura</a>(cor,&nbsp;cor_preench='')<br>
+&nbsp;<br>
+Classe&nbsp;abstrata&nbsp;que&nbsp;representa&nbsp;uma&nbsp;figura&nbsp;geométrica.<br>
+&nbsp;<br>
+Todas&nbsp;as&nbsp;figuras&nbsp;do&nbsp;sistema&nbsp;herdam&nbsp;desta&nbsp;classe&nbsp;e&nbsp;implementam<br>
+seus&nbsp;métodos&nbsp;abstratos.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Figura-__init__"><strong>__init__</strong></a>(self, cor, cor_preench='')</dt><dd><tt>Inicializa&nbsp;uma&nbsp;figura.<br>
+&nbsp;<br>
+@param&nbsp;cor:&nbsp;Cor&nbsp;da&nbsp;borda&nbsp;da&nbsp;figura.<br>
+@param&nbsp;cor_preench:&nbsp;Cor&nbsp;de&nbsp;preenchimento&nbsp;da&nbsp;figura.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Figura-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;as&nbsp;dimensões&nbsp;da&nbsp;figura.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Figura-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;a&nbsp;figura&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Figura-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;pré-visualização&nbsp;da&nbsp;figura.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Figura-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;figura&nbsp;está&nbsp;incompleta.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;estiver&nbsp;incompleta,&nbsp;False&nbsp;caso&nbsp;contrário.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'atualizar', 'desenhar', 'desenhar_nova', 'incompleta'})</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Linha">class <strong>Linha</strong></a>(<a href="Modelo.html#Figura">Figura</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Linha">Linha</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench='')<br>
+&nbsp;<br>
+Representa&nbsp;uma&nbsp;linha.<br>
+&nbsp;<br>
+Permite&nbsp;criar,&nbsp;atualizar&nbsp;e&nbsp;desenhar&nbsp;uma&nbsp;linha.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Linha-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench='')</dt><dd><tt>Inicializa&nbsp;uma&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x1:&nbsp;Coordenada&nbsp;X&nbsp;inicial.<br>
+@param&nbsp;y1:&nbsp;Coordenada&nbsp;Y&nbsp;inicial.<br>
+@param&nbsp;cor:&nbsp;Cor&nbsp;da&nbsp;linha.<br>
+@param&nbsp;cor_preench:&nbsp;Não&nbsp;utilizado.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Linha-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;o&nbsp;ponto&nbsp;final&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Linha-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;a&nbsp;linha&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Linha-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;prévia&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Linha-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Model">class <strong>Model</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Model">Model</a>&nbsp;da&nbsp;aplicação.<br>
+&nbsp;<br>
+Responsável&nbsp;por&nbsp;armazenar&nbsp;todas&nbsp;as&nbsp;figuras&nbsp;do&nbsp;desenho<br>
+e&nbsp;realizar&nbsp;as&nbsp;operações&nbsp;de&nbsp;persistência.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Model-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Inicializa&nbsp;o&nbsp;model.<br>
+&nbsp;<br>
+Cria&nbsp;uma&nbsp;lista&nbsp;vazia&nbsp;para&nbsp;armazenar&nbsp;as&nbsp;figuras.<br>
+&nbsp;<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Model-abrir"><strong>abrir</strong></a>(self, nome_arquivo)</dt><dd><tt>Carrega&nbsp;um&nbsp;desenho&nbsp;salvo&nbsp;anteriormente.<br>
+&nbsp;<br>
+Lê&nbsp;um&nbsp;arquivo&nbsp;serializado&nbsp;com&nbsp;o&nbsp;módulo&nbsp;pickle&nbsp;e&nbsp;restaura<br>
+a&nbsp;lista&nbsp;de&nbsp;figuras&nbsp;armazenada&nbsp;no&nbsp;modelo.<br>
+&nbsp;<br>
+@param&nbsp;nome_arquivo:&nbsp;Caminho&nbsp;do&nbsp;arquivo&nbsp;que&nbsp;será&nbsp;aberto.<br>
+@return:&nbsp;None.<br>
+@throws&nbsp;FileNotFoundError:&nbsp;Caso&nbsp;o&nbsp;arquivo&nbsp;informado&nbsp;não&nbsp;exista.<br>
+@throws&nbsp;OSError:&nbsp;Caso&nbsp;ocorra&nbsp;erro&nbsp;durante&nbsp;a&nbsp;leitura&nbsp;do&nbsp;arquivo.<br>
+@throws&nbsp;pickle.UnpicklingError:&nbsp;Caso&nbsp;o&nbsp;conteúdo&nbsp;do&nbsp;arquivo&nbsp;seja&nbsp;inválido&nbsp;ou&nbsp;esteja&nbsp;corrompido.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Model-adicionar"><strong>adicionar</strong></a>(self, figura)</dt><dd><tt>Adiciona&nbsp;a&nbsp;figura&nbsp;ao&nbsp;model.<br>
+&nbsp;<br>
+@param&nbsp;figura:&nbsp;Objeto&nbsp;da&nbsp;classe&nbsp;<a href="#Figura">Figura</a>&nbsp;que&nbsp;será&nbsp;armazenado.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Model-listar"><strong>listar</strong></a>(self)</dt><dd><tt>Retorna&nbsp;todas&nbsp;as&nbsp;figuras&nbsp;armazenadas.<br>
+&nbsp;<br>
+@return:&nbsp;Lista&nbsp;contendo&nbsp;todas&nbsp;as&nbsp;figuras&nbsp;do&nbsp;desenho.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Model-salvar"><strong>salvar</strong></a>(self, nome_arquivo)</dt><dd><tt>&nbsp;Salva&nbsp;todas&nbsp;as&nbsp;figuras&nbsp;do&nbsp;desenho&nbsp;em&nbsp;um&nbsp;arquivo.<br>
+&nbsp;<br>
+&nbsp;Utiliza&nbsp;o&nbsp;módulo&nbsp;pickle&nbsp;para&nbsp;serializar&nbsp;a&nbsp;lista&nbsp;de&nbsp;figuras,<br>
+&nbsp;permitindo&nbsp;que&nbsp;o&nbsp;desenho&nbsp;seja&nbsp;recuperado&nbsp;posteriormente.<br>
+&nbsp;<br>
+@param&nbsp;nome_arquivo:&nbsp;Caminho&nbsp;do&nbsp;arquivo&nbsp;onde&nbsp;o&nbsp;desenho&nbsp;será&nbsp;salvo.<br>
+@return:&nbsp;None.<br>
+@throws&nbsp;OSError:&nbsp;Caso&nbsp;ocorra&nbsp;erro&nbsp;durante&nbsp;a&nbsp;criação&nbsp;ou&nbsp;escrita&nbsp;do&nbsp;arquivo.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Ovais">class <strong>Ovais</strong></a>(<a href="Modelo.html#Linha">Linha</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Ovais">Ovais</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench)<br>
+&nbsp;<br>
+Representa&nbsp;uma&nbsp;figura&nbsp;oval.<br>
+&nbsp;<br>
+Herda&nbsp;da&nbsp;classe&nbsp;<a href="#Linha">Linha</a>&nbsp;e&nbsp;utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final<br>
+para&nbsp;definir&nbsp;as&nbsp;dimensões&nbsp;da&nbsp;oval&nbsp;desenhada&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Ovais">Ovais</a></dd>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Ovais-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench)</dt><dd><tt>Inicializa&nbsp;o&nbsp;__init__&nbsp;de&nbsp;<a href="#Linha">Linha</a>&nbsp;<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Ovais-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;a&nbsp;figura&nbsp;oval&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+Utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final&nbsp;para&nbsp;definir&nbsp;o<br>
+retângulo&nbsp;delimitador&nbsp;da&nbsp;oval.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;a&nbsp;oval&nbsp;será&nbsp;exibida.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Ovais-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;pré-visualização&nbsp;da&nbsp;figura&nbsp;oval.<br>
+&nbsp;<br>
+Exibe&nbsp;a&nbsp;oval&nbsp;enquanto&nbsp;o&nbsp;usuário&nbsp;ainda&nbsp;está&nbsp;definindo<br>
+suas&nbsp;dimensões.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;a&nbsp;pré-visualização&nbsp;será&nbsp;exibida.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Linha">Linha</a>:<br>
+<dl><dt><a name="Ovais-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;o&nbsp;ponto&nbsp;final&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Ovais-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Pentagono">class <strong>Pentagono</strong></a>(<a href="Modelo.html#Linha">Linha</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Pentagono">Pentagono</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench)<br>
+&nbsp;<br>
+Representa&nbsp;um&nbsp;Pentágono.<br>
+&nbsp;<br>
+Herda&nbsp;da&nbsp;classe&nbsp;<a href="#Linha">Linha</a>&nbsp;e&nbsp;utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final<br>
+para&nbsp;determinar&nbsp;as&nbsp;dimensões&nbsp;do&nbsp;pentágono&nbsp;desenhado&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Pentagono">Pentagono</a></dd>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Pentagono-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench)</dt><dd><tt>Inicializa&nbsp;o&nbsp;__init__&nbsp;de&nbsp;<a href="#Linha">Linha</a>&nbsp;<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Pentagono-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;o&nbsp;pentágono&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+O&nbsp;pentágono&nbsp;é&nbsp;construído&nbsp;a&nbsp;partir&nbsp;das&nbsp;coordenadas&nbsp;inicial<br>
+e&nbsp;final&nbsp;definidas&nbsp;pelo&nbsp;usuário.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;o&nbsp;pentágono&nbsp;será&nbsp;exibido.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<dl><dt><a name="Pentagono-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;pré-visualização&nbsp;do&nbsp;pentágono.<br>
+&nbsp;<br>
+Exibe&nbsp;o&nbsp;pentágono&nbsp;enquanto&nbsp;o&nbsp;usuário&nbsp;ainda&nbsp;está&nbsp;definindo<br>
+suas&nbsp;dimensões.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho&nbsp;onde&nbsp;a&nbsp;pré-visualização&nbsp;será&nbsp;exibida.<br>
+@return:&nbsp;None.<br>
+@since:&nbsp;1.0</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Linha">Linha</a>:<br>
+<dl><dt><a name="Pentagono-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;o&nbsp;ponto&nbsp;final&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Pentagono-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Rabisco">class <strong>Rabisco</strong></a>(<a href="Modelo.html#Figura">Figura</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Rabisco">Rabisco</a>(x1,&nbsp;y1,&nbsp;cor)<br>
+&nbsp;<br>
+Representa&nbsp;um&nbsp;rabisco&nbsp;desenhado&nbsp;livremente&nbsp;pelo&nbsp;usuário.<br>
+&nbsp;<br>
+Permite&nbsp;criar,&nbsp;atualizar&nbsp;e&nbsp;desenhar&nbsp;um&nbsp;<a href="#Rabisco">Rabisco</a>.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Rabisco">Rabisco</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Rabisco-__init__"><strong>__init__</strong></a>(self, x1, y1, cor)</dt><dd><tt>Inicializa&nbsp;um&nbsp;<a href="#Rabisco">Rabisco</a>.<br>
+@param&nbsp;pontos:&nbsp;Coordenada&nbsp;X&nbsp;inicial&nbsp;e&nbsp;coordenada&nbsp;Y&nbsp;inicial&nbsp;em&nbsp;uma&nbsp;lista.<br>
+@param&nbsp;cor:&nbsp;Cor&nbsp;da&nbsp;linha.<br>
+@param&nbsp;cor_preench:&nbsp;Não&nbsp;utilizado.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Rabisco-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Adiciona&nbsp;novos&nbsp;pares&nbsp;de&nbsp;coordenadas&nbsp;a&nbsp;lista&nbsp;pontos<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Rabisco-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;o&nbsp;rabisco&nbsp;conectando&nbsp;todos&nbsp;os&nbsp;pontos&nbsp;armazenados.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Rabisco-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;prévia&nbsp;do&nbsp;rabisco.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Rabisco-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;o&nbsp;rabisco&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;a&nbsp;lista&nbsp;pontos&nbsp;tiver&nbsp;tamanho&nbsp;1&nbsp;ou&nbsp;menos.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Retangulos">class <strong>Retangulos</strong></a>(<a href="Modelo.html#Linha">Linha</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Retangulos">Retangulos</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench)<br>
+&nbsp;<br>
+Representa&nbsp;um&nbsp;Retangulo.<br>
+&nbsp;<br>
+Herda&nbsp;da&nbsp;classe&nbsp;<a href="#Linha">Linha</a>&nbsp;e&nbsp;utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final<br>
+para&nbsp;determinar&nbsp;as&nbsp;dimensões&nbsp;do&nbsp;Retangulo&nbsp;desenhado&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Retangulos">Retangulos</a></dd>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Retangulos-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench)</dt><dd><tt>Inicializa&nbsp;o&nbsp;__init__&nbsp;de&nbsp;<a href="#Linha">Linha</a>&nbsp;<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Retangulos-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;um&nbsp;retangulo&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Retangulos-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;prévia&nbsp;do&nbsp;retangulo.<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Linha">Linha</a>:<br>
+<dl><dt><a name="Retangulos-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;o&nbsp;ponto&nbsp;final&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Retangulos-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Triangulo">class <strong>Triangulo</strong></a>(<a href="Modelo.html#Linha">Linha</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Triangulo">Triangulo</a>(x1,&nbsp;y1,&nbsp;cor,&nbsp;cor_preench)<br>
+&nbsp;<br>
+Representa&nbsp;um&nbsp;<a href="#Triangulo">Triangulo</a>.<br>
+&nbsp;<br>
+Herda&nbsp;da&nbsp;classe&nbsp;<a href="#Linha">Linha</a>&nbsp;e&nbsp;utiliza&nbsp;as&nbsp;coordenadas&nbsp;inicial&nbsp;e&nbsp;final<br>
+para&nbsp;determinar&nbsp;as&nbsp;dimensões&nbsp;do&nbsp;triangulo&nbsp;desenhado&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@version:&nbsp;1.0<br>
+@since:&nbsp;1.0<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Modelo.html#Triangulo">Triangulo</a></dd>
+<dd><a href="Modelo.html#Linha">Linha</a></dd>
+<dd><a href="Modelo.html#Figura">Figura</a></dd>
+<dd><a href="abc.html#ABC">abc.ABC</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Triangulo-__init__"><strong>__init__</strong></a>(self, x1, y1, cor, cor_preench)</dt><dd><tt>Inicializa&nbsp;o&nbsp;__init__&nbsp;de&nbsp;<a href="#Linha">Linha</a>&nbsp;<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Triangulo-desenhar"><strong>desenhar</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;um&nbsp;<a href="#Triangulo">Triangulo</a>&nbsp;no&nbsp;canvas.<br>
+&nbsp;<br>
+@param&nbsp;x3&nbsp;:&nbsp;Novo&nbsp;ponto&nbsp;para&nbsp;forma&nbsp;o&nbsp;<a href="#Triangulo">Triangulo</a><br>
+@param&nbsp;y3&nbsp;:&nbsp;Novo&nbsp;ponto&nbsp;para&nbsp;forma&nbsp;o&nbsp;<a href="#Triangulo">Triangulo</a><br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Triangulo-desenhar_nova"><strong>desenhar_nova</strong></a>(self, canvas)</dt><dd><tt>Desenha&nbsp;uma&nbsp;prévia&nbsp;do&nbsp;triangulo<br>
+&nbsp;<br>
+&nbsp;<br>
+@param&nbsp;canvas:&nbsp;Área&nbsp;de&nbsp;desenho.<br>
+@param&nbsp;x3&nbsp;:&nbsp;Novo&nbsp;ponto&nbsp;para&nbsp;forma&nbsp;o&nbsp;<a href="#Triangulo">Triangulo</a><br>
+@param&nbsp;y3&nbsp;:&nbsp;Novo&nbsp;ponto&nbsp;para&nbsp;forma&nbsp;o&nbsp;<a href="#Triangulo">Triangulo</a><br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="Modelo.html#Linha">Linha</a>:<br>
+<dl><dt><a name="Triangulo-atualizar"><strong>atualizar</strong></a>(self, x, y)</dt><dd><tt>Atualiza&nbsp;o&nbsp;ponto&nbsp;final&nbsp;da&nbsp;linha.<br>
+&nbsp;<br>
+@param&nbsp;x:&nbsp;Nova&nbsp;coordenada&nbsp;X.<br>
+@param&nbsp;y:&nbsp;Nova&nbsp;coordenada&nbsp;Y.<br>
+@return:&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="Triangulo-incompleta"><strong>incompleta</strong></a>(self)</dt><dd><tt>Verifica&nbsp;se&nbsp;a&nbsp;linha&nbsp;possui&nbsp;comprimento.<br>
+&nbsp;<br>
+@return:&nbsp;True&nbsp;se&nbsp;os&nbsp;pontos&nbsp;inicial&nbsp;e&nbsp;final&nbsp;forem&nbsp;iguais.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Modelo.html#Figura">Figura</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

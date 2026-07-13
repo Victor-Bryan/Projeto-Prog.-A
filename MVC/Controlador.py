@@ -1,10 +1,22 @@
 from Modelo import *
 from tkinter import filedialog
 
-
 class Controlador:
+    """
+    Classe responsável por controlar a interação entre a View e o Model.
 
+    Gerencia os eventos do mouse para criação de figuras, além das
+    operações de salvar e abrir desenhos.
+    """
     def __init__(self, view):
+        """
+        Inicializa o controlador.
+
+        Cria uma instância do modelo, registra os eventos da interface
+        gráfica e configura os comandos dos botões.
+
+        @param view: Objeto responsável pela interface gráfica da aplicação.
+        """
         self.view = view
 
         self.model =Model()
@@ -16,9 +28,15 @@ class Controlador:
         self.view.bt_salvar.config(command=self.salvar)
         self.view.bt_abrir.config(command=self.abrir)
 
-
     def iniciar_figura_nova(self, event):
+        """
+        Inicia a criação de uma nova figura.
 
+        Obtém as configurações escolhidas pelo usuário e cria o objeto
+        correspondente ao tipo de figura selecionado.
+
+        @param event: Evento do mouse contendo as coordenadas iniciais.
+        """
         cor = self.view.cor_borda_var.get()
         preench = self.view.cor_preench_var.get()
         tipo = self.view.tipo_figura_var.get()
@@ -45,7 +63,14 @@ class Controlador:
             self.figura_nova = Pentagono(event.x, event.y, cor, preench)
 
     def atualizar_figura_nova(self, event):
+        """
+        Atualiza as dimensões da figura que está sendo desenhada.
 
+        Enquanto o botão do mouse permanece pressionado, atualiza a
+        figura e solicita seu redesenho na interface.
+
+        @param event: Evento do mouse contendo as novas coordenadas.
+        """
         if self.figura_nova is None:
             return
 
@@ -54,7 +79,14 @@ class Controlador:
         self.view.redesenhar(self.model, self.figura_nova)
 
     def incluir_figura_nova(self, event):
+        """
+        Finaliza a criação da figura.
 
+        Caso a figura seja válida, adiciona-a ao modelo e atualiza a
+        interface gráfica.
+
+        @param event: Evento de liberação do botão do mouse.
+        """
         if self.figura_nova is None:
             return
 
@@ -66,6 +98,12 @@ class Controlador:
         self.view.redesenhar(self.model)
     
     def salvar(self):
+        """
+        Salva o desenho em um arquivo.
+
+        Abre uma caixa de diálogo para que o usuário escolha o local
+        onde o desenho será salvo com extensão '.des'.
+        """
         arquivo = filedialog.asksaveasfilename(
                   defaultextension=".des",
                   filetypes=[("Arquivos de desenho", "*.des")]
@@ -75,6 +113,12 @@ class Controlador:
              self.model.salvar(arquivo)
     
     def abrir(self):
+        """
+        Abre um desenho previamente salvo.
+
+        Exibe uma caixa de diálogo para seleção de um arquivo '.des',
+        carrega seu conteúdo no modelo e atualiza a interface gráfica.
+        """
         arquivo = filedialog.askopenfilename(
              filetypes=[("Arquivos de desenho", "*.des")]
             )

@@ -40,9 +40,11 @@ class View:
         self.cor_borda_var = StringVar(value="black")
         self.cor_preench_var = StringVar(value="")
         self.bt_salvar = ttk.Button(self.frame, text="Salvar")
-        self.bt_salvar.grid(row=0, column=2)
+        self.bt_salvar.grid(row=0, column=1)
         self.bt_abrir = ttk.Button(self.frame, text="Abrir")
-        self.bt_abrir.grid(row=1, column=2)
+        self.bt_abrir.grid(row=1, column=1)
+        self.bt_limpar = ttk.Button(self.frame,text="Limpar")
+        self.bt_limpar.grid(row=2, column=1)
         ttk.OptionMenu(self.frame, self.tipo_figura_var, "Linha", "Linha", "Rabisco", "Retangulos","Ovais", "Circulos", "Triangulo", "Pentagono" ).grid(row=0, column=1, sticky=W, **paddings)
 
         ttk.OptionMenu( self.frame, self.cor_borda_var, "black", "black", "white", "red", "blue","green", "orange", "yellow", "purple","pink" ).grid(row=1, column=1, sticky=W, **paddings)
@@ -84,4 +86,4 @@ class View:
         @return: None.
         @since: 1.0
         """
-        self.root.mainloop()
+        self.root.mainloop()        

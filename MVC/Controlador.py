@@ -1,5 +1,6 @@
 from Modelo import *
 from tkinter import filedialog
+from Estados import *
 
 class Controlador:
     """
@@ -21,46 +22,44 @@ class Controlador:
 
         self.model =Model()
         self.figura_nova = None
-
+        self.estados = {
+                "Linha": EstadoLinha(),
+                "Rabisco": EstadoRabisco(),
+                "Retangulos": EstadoRetangulo(),
+                "Ovais": EstadoOval(),
+                "Circulos": EstadoCirculo(),
+                "Triangulo": EstadoTriangulo(),
+                "Pentagono": EstadoPentagono()
+                }
         self.view.canvas.bind("<ButtonPress-1>", self.iniciar_figura_nova)
         self.view.canvas.bind("<B1-Motion>", self.atualizar_figura_nova)
         self.view.canvas.bind("<ButtonRelease-1>", self.incluir_figura_nova)
         self.view.bt_salvar.config(command=self.salvar)
         self.view.bt_abrir.config(command=self.abrir)
+        self.view.bt_limpar.config(command=self.limpar)
 
     def iniciar_figura_nova(self, event):
         """
-        Inicia a criação de uma nova figura.
+       Inicia a criação de uma nova figura.
 
-        Obtém as configurações escolhidas pelo usuário e cria o objeto
-        correspondente ao tipo de figura selecionado.
+      Obtém as configurações escolhidas pelo usuário e delega
+       a criação da figura ao estado correspondente.
 
-        @param event: Evento do mouse contendo as coordenadas iniciais.
-        """
+      @param event: Evento do mouse contendo as coordenadas iniciais.
+       """
         cor = self.view.cor_borda_var.get()
         preench = self.view.cor_preench_var.get()
         tipo = self.view.tipo_figura_var.get()
 
-        if tipo == "Linha":
-            self.figura_nova = Linha(event.x, event.y, cor)
+        estado = self.estados.get(tipo)
 
-        elif tipo == "Rabisco":
-            self.figura_nova = Rabisco(event.x, event.y, cor)
-
-        elif tipo == "Retangulos":
-            self.figura_nova = Retangulos(event.x, event.y, cor, preench)
-
-        elif tipo == "Ovais":
-            self.figura_nova = Ovais(event.x, event.y, cor, preench)
-
-        elif tipo == "Circulos":
-            self.figura_nova = Circulos(event.x, event.y, cor, preench)
-
-        elif tipo == "Triangulo":
-            self.figura_nova = Triangulo(event.x, event.y, cor, preench)
-
-        elif tipo == "Pentagono":
-            self.figura_nova = Pentagono(event.x, event.y, cor, preench)
+        if estado is not None:
+           self.figura_nova = estado.criar_figura(
+            event.x,
+            event.y,
+            cor,
+            preench
+            )
 
     def atualizar_figura_nova(self, event):
         """
@@ -126,3 +125,17 @@ class Controlador:
         if arquivo:
             self.model.abrir(arquivo)
             self.view.redesenhar(self.model)
+    
+    def limpar(self):
+       """
+       Remove todas as figuras do desenho.
+
+       Solicita ao modelo que remova todas as figuras e
+       atualiza a interface gráfica.
+
+       @return: None.
+       @since: 1.0
+       """
+       self.model.limpar()
+       self.figura_nova = None
+       self.view.redesenhar(self.model)

@@ -87,6 +87,17 @@ class Model:
         """
         with open(nome_arquivo, "rb") as arquivo:
             self.figuras = pickle.load(arquivo)
+    
+    def limpar(self):
+      """
+      Remove todas as figuras armazenadas no modelo.
+ 
+      Esvazia a lista de figuras, deixando o desenho em branco.
+
+      @return: None.
+      @since: 1.0
+    """
+      self.figuras.clear()
 
 class Figura(ABC):
     """
